@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Gridea | Shrek Sun&#39;s Space</title>
+<title>java | Shrek Sun&#39;s Space</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,27 +91,94 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: Gridea</h2>
+          <h2 class="current-tag">标签: java</h2>
           
             <article class="post-item">
               <div class="left">
-                <a href="https://shreksun.github.io//post/hello-gridea">
-                  <h2 class="post-title">Hello Gridea</h2>
+                <a href="https://shreksun.github.io//post/单例">
+                  <h2 class="post-title">单例</h2>
                 </a>
                 <div class="post-date">
-                  2018-12-12
+                  2019-04-29
                 </div>
                 <div class="post-abstract">
-                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+                  <pre><code class="language-java">private SingletonPattern() {
+}
+
+private static class SingletonPatternHolder {
+    private static final SingletonPattern singletonPattern = new SingletonPattern();
+}
+
+public static SingletonPattern getInstance() {
+    return SingletonPatternHolder.singletonPattern;
+}
+</code></pre>
 
                 </div>
               </div>
               
-                <a class="right" href="https://shreksun.github.io//post/hello-gridea">
-                  <div class="feature-container" style="background-image: url('https://shreksun.github.io//post-images/hello-gridea.png')">
-                  </div>
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://shreksun.github.io//post/jar包冲突">
+                  <h2 class="post-title">jar包冲突</h2>
                 </a>
+                <div class="post-date">
+                  2019-03-13
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://shreksun.github.io//post/并发编程">
+                  <h2 class="post-title">并发编程</h2>
+                </a>
+                <div class="post-date">
+                  2019-03-12
+                </div>
+                <div class="post-abstract">
+                  <h4 id="对象共享">对象共享</h4>
+<ul>
+<li>加锁不仅是互斥行为，还保证了内存的可见性。为了所有线程都能看到共享变量的最新值，执行这个值的读写操作必须保持同一个锁。</li>
+<li>volatile
+<ul>
+<li>变量不会被缓存，被标记的变量读取时保证最新值。比加锁轻的同步。</li>
+<li>使用在需要确保它们自身状态的可见性的地方,标记重要的程序生命周期。</li>
+<li>不保证原子性，只保证可见性。</li>
+</ul>
+</li>
+</ul>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://shreksun.github.io//post/IO">
+                  <h2 class="post-title">IO</h2>
+                </a>
+                <div class="post-date">
+                  2019-03-07
+                </div>
+                <div class="post-abstract">
+                  <h4 id="输入字节流inputstream">输入字节流InputStream:</h4>
+<ul>
+<li><strong>ByteArrayInputStream、StringBufferInputStream、FileInputStream</strong> 是三种基本的介质流，它们分别从Byte 数组、StringBuffer、和本地文件中读取数据。</li>
+<li><strong>PipedInputStream</strong> 是从与其它线程共用的管道中读取数据。PipedInputStream的一个实例要和PipedOutputStream的一个实例共同使用，共同完成管道的读取写入操作。主要用于线程操作。</li>
+<li><strong>DataInputStream</strong>： 将基础数据类型读取出来</li>
+<li><strong>ObjectInputStream</strong> 和所有 <strong>FilterInputStream</strong> 的子类都是装饰流（装饰器模式的主角）。</li>
+</ul>
+
+                </div>
+              </div>
               
             </article>
           

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | Shrek Sun&#39;s Space</title>
+<title>7.8-7.14ARTS打卡 | Shrek Sun&#39;s Space</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,26 +91,97 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">7.8-7.14ARTS打卡</h2>
+            <div class="post-date">2019-07-13</div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/arts">arts</a>
+            <div class="post-content">
+              <h3 id="algorithm">Algorithm</h3>
+<p><a href="https://leetcode-cn.com/problems/counting-bits/submissions/">counting-bits</a></p>
+<!--more-->
+<pre><code class="language-java">   class Solution {
+    public  int[] countBits(int num) {
+        List&lt;Integer&gt; numList = new ArrayList&lt;Integer&gt;();
+        for (int i = 0; i &lt;= num; i++) {
+            numList.add(i);
+        }
+        int[] result = numList.parallelStream().mapToInt(number -&gt; number = getBitNum(number)).toArray();
+        return result;
+    }
+
+    private Integer getBitNum(Integer num) {
+        int count = 0;
+        while (num &gt; 0) {
+            int bit = num % 2;
+            if (bit == 1) {
+                count ++;
+            }
+            num/=2;
+        }
+        return count;
+    }
+}
+</code></pre>
+<pre><code class="language-java">/**
+ *  数字   0    1   2   3   4   5   6   7   8
+ *  二进   0    1  10  11  100 101 110 111 1000
+ *  1个数  0   1   1   2   1   2   2   3   1
+ *  
+ *  当前数i如果能整除 count = (i/2的count)
+ *  不能整除 count = (i/2的count + 1)
+ */
+
+public int[] countBits2(int num) {
+    int[] ans = new int[num + 1];
+    int i = 0;
+    while (i &lt;= num) {
+        int d = i/2;
+        int m = i%2;
+        if (m == 0) {
+            ans[i] = ans[d];
+        }else {
+            ans[i] = ans[d] + 1;
+        }
+        i++;
+    }
+    return ans;
+}
+</code></pre>
+<h3 id="review">Review</h3>
+<pre><code>ThreadPoolExecutor 源码学习
+</code></pre>
+<h3 id="tip">Tip</h3>
+<p>用java8中的optional判空</p>
+<pre><code class="language-java"> Optional.ofNullable(text).ifPresent(System.out::println);
+</code></pre>
+<h3 id="share">Share</h3>
+<p><a href="https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/index.html">Java 8 中的 Streams API 详解</a></p>
+
+            </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/book">book</a>
+              <div class="tag-container">
+                
+                  <a href="https://shreksun.github.io//tag/arts" class="tag">
+                    arts
+                  </a>
+                
+              </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/code">code</a>
             
-              <a class="tag" href="https://shreksun.github.io//tag/jvm">JVM</a>
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://shreksun.github.io//post/7-1-7-7ARTS打卡">
+                  <h3 class="post-title">
+                    7.1-7.7ARTS打卡
+                  </h3>
+                </a>
+              </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/java">java</a>
+
             
-              <a class="tag" href="https://shreksun.github.io//tag/idea">idea</a>
-            
-              <a class="tag" href="https://shreksun.github.io//tag/mvcc">mvcc</a>
-            
-              <a class="tag" href="https://shreksun.github.io//tag/gridea">Gridea</a>
-            
+
           </div>
+
         </div>
       </div>
     </div>

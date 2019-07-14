@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | Shrek Sun&#39;s Space</title>
+<title>并发编程 | Shrek Sun&#39;s Space</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,27 +92,87 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
-            
-              <div class="feature-container" style="background-image: url('https://shreksun.github.io//post-images/about.jpeg')">
-              </div>
+            <h2 class="post-title">并发编程</h2>
+            <div class="post-date">2019-03-12</div>
             
             <div class="post-content">
-              <p>一个码农</p>
+              <h4 id="对象共享">对象共享</h4>
 <ul>
-<li>email：senouch@outlook.com</li>
-<li>github: https://github.com/shreksun</li>
+<li>加锁不仅是互斥行为，还保证了内存的可见性。为了所有线程都能看到共享变量的最新值，执行这个值的读写操作必须保持同一个锁。</li>
+<li>volatile
+<ul>
+<li>变量不会被缓存，被标记的变量读取时保证最新值。比加锁轻的同步。</li>
+<li>使用在需要确保它们自身状态的可见性的地方,标记重要的程序生命周期。</li>
+<li>不保证原子性，只保证可见性。</li>
 </ul>
-<!-- more -->
+</li>
+</ul>
+<!--more-->
+<pre><code class="language-java">volatile boolean asleep
+
+while(asleep)
+
+countSomeSheep()
+
+
+</code></pre>
+<h5 id="发布逸出">发布逸出</h5>
+<ul>
+<li>一个对象可以在当前作用域以外被实现。</li>
+</ul>
+<h5 id="线程封闭">线程封闭</h5>
+<ul>
+<li>volatile线程封闭只要保证单线程写，则可以保证线程封闭，volatile保证读最新。</li>
+<li>ThreadLocal
+<ul>
+<li>保证使用的变量每个线程保存一个副本。</li>
+<li>增加隐含耦合，降低可重用性，小心使用。</li>
+</ul>
+</li>
+</ul>
+<h5 id="不变性">不变性</h5>
+<ul>
+<li>final 可以创建一个不可变对象，来保证原子性。</li>
+</ul>
+<h5 id="安全发布">安全发布</h5>
+<ul>
+<li>最方便的发布静态构造对象，使用静态的初始化器。由jvm保证安全发布</li>
+<li>不可变对象可以任意机制发布。</li>
+<li>事实不可变对象需要安全方式发布。（把引用放入final，静态，放入线程安全容器）</li>
+<li>可变对象要安全方式发布，并且加锁。</li>
+</ul>
+<h5 id="在线程安全类扩展功能">在线程安全类扩展功能</h5>
+<ul>
+<li>通过继承的方式扩展功能，必须保证父类同步策略，锁不改变，否则会破坏子类的线程安全。</li>
+<li>扩展时采用客户端加锁必须保证锁一致。</li>
+<li>客户端加锁，扩展类方式都会破环封装性。</li>
+<li>组合方式，实现需要扩展的操作，并加锁，讲原有操作同步，委托给原有类。更为健壮，不受需要扩展类的同步策略变化。</li>
+</ul>
+<h4 id="基础构建模块">基础构建模块</h4>
+<h5 id="同步容器类">同步容器类</h5>
+<ul>
+<li>迭代器在容器被修改时会抛出concurrentModificationException</li>
+<li>使用迭代器也无法避免遍历是的同步问题，需要加锁</li>
+<li>ConcurrentHashMap迭代过程中不需要加锁，弱一致性，size，isEmpty不准确，增强了性能，只有需要对map进行独占访问时才需要使用Hashtable，synchrnziedMap</li>
+<li>CopyOnWriteArrayList用于替代同步List，写入时复制，只有当迭代数量远大于修改数量时适合使用。</li>
+</ul>
+
             </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://shreksun.github.io//tag/java" class="tag">
+                    java
+                  </a>
+                
+              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://shreksun.github.io//post/hello-gridea">
+                <a href="https://shreksun.github.io//post/MVCC">
                   <h3 class="post-title">
-                    Hello Gridea
+                    MVCC
                   </h3>
                 </a>
               </div>

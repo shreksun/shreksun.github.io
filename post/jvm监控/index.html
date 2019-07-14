@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | Shrek Sun&#39;s Space</title>
+<title>jvm监控 | Shrek Sun&#39;s Space</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,26 +91,105 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">jvm监控</h2>
+            <div class="post-date">2019-04-18</div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/arts">arts</a>
+            <div class="post-content">
+              <p>jcmd -l 查看进程</p>
+<p>jstat -gc 34291 查看进程34291 gc情况</p>
+<!--more-->
+<table>
+<thead>
+<tr>
+<th>S0C</th>
+<th>S1C</th>
+<th>S0U</th>
+<th>S1U</th>
+<th>EC</th>
+<th>EU</th>
+<th>OC</th>
+<th>OU</th>
+<th>MC</th>
+<th>MU</th>
+<th>CCSC</th>
+<th>CCSU</th>
+<th>YGC</th>
+<th>YGCT</th>
+<th>FGC</th>
+<th>FGCT</th>
+<th>GCT</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10752.0</td>
+<td>10752.0</td>
+<td>0.0</td>
+<td>5848.4</td>
+<td>65536.0</td>
+<td>61354.6</td>
+<td>175104.0</td>
+<td>80.0</td>
+<td>16256.0</td>
+<td>15720.8</td>
+<td>1920.0</td>
+<td>1815.9</td>
+<td>1</td>
+<td>0.014</td>
+<td>0</td>
+<td>0.000</td>
+<td>0.014</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>S0C：第一个幸存区的大小</li>
+<li>S1C：第二个幸存区的大小</li>
+<li>S0U：第一个幸存区的使用大小</li>
+<li>S1U：第二个幸存区的使用大小</li>
+<li>EC：伊甸园区的大小</li>
+<li>EU：伊甸园区的使用大小</li>
+<li>OC：老年代大小</li>
+<li>OU：老年代使用大小</li>
+<li>MC：方法区大小</li>
+<li>MU：方法区使用大小</li>
+<li>CCSC:压缩类空间大小</li>
+<li>CCSU:压缩类空间使用大小</li>
+<li>YGC：年轻代垃圾回收次数</li>
+<li>YGCT：年轻代垃圾回收消耗时间</li>
+<li>FGC：老年代垃圾回收次数</li>
+<li>FGCT：老年代垃圾回收消耗时间</li>
+<li>GCT：垃圾回收消耗总时间</li>
+</ul>
+
+            </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/book">book</a>
+              <div class="tag-container">
+                
+                  <a href="https://shreksun.github.io//tag/jvm" class="tag">
+                    JVM
+                  </a>
+                
+              </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/code">code</a>
             
-              <a class="tag" href="https://shreksun.github.io//tag/jvm">JVM</a>
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://shreksun.github.io//post/快捷键">
+                  <h3 class="post-title">
+                    快捷键
+                  </h3>
+                </a>
+              </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/java">java</a>
+
             
-              <a class="tag" href="https://shreksun.github.io//tag/idea">idea</a>
-            
-              <a class="tag" href="https://shreksun.github.io//tag/mvcc">mvcc</a>
-            
-              <a class="tag" href="https://shreksun.github.io//tag/gridea">Gridea</a>
-            
+
           </div>
+
         </div>
       </div>
     </div>

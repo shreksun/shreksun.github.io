@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | Shrek Sun&#39;s Space</title>
+<title>虚拟机字节码执行引擎 | Shrek Sun&#39;s Space</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,26 +91,58 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">虚拟机字节码执行引擎</h2>
+            <div class="post-date">2019-05-20</div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/arts">arts</a>
+            <div class="post-content">
+              <h4 id="局部变量表">局部变量表</h4>
+<ul>
+<li>以变量槽slot为最小单位，某个变量超出变量域可以被回收给其他变量使用。</li>
+<li>局部变量定义无赋值不可使用。</li>
+</ul>
+<h4 id="操作数栈">操作数栈</h4>
+<ul>
+<li>入栈出栈就是方法执行的过程。</li>
+<li>数据类型必须和字节码指令的序列严格匹配。</li>
+</ul>
+<!--more-->
+<h4 id="动态链接">动态链接</h4>
+<ul>
+<li>包含一个指向运行时常量池中该栈帧所属方法的引用。</li>
+<li><strong>java.lang.String.intern()</strong> 查找常量池中有就返回 没有加入常量池</li>
+</ul>
+<h4 id="方法返回地址">方法返回地址</h4>
+<ul>
+<li>正常退出，调用者的pc计数器值就是返回地址，栈帧中会保存。</li>
+<li>异常退出时，返回地址通过异常处理器决定。</li>
+</ul>
+
+            </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/book">book</a>
+              <div class="tag-container">
+                
+                  <a href="https://shreksun.github.io//tag/jvm" class="tag">
+                    JVM
+                  </a>
+                
+              </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/code">code</a>
             
-              <a class="tag" href="https://shreksun.github.io//tag/jvm">JVM</a>
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://shreksun.github.io//post/单例">
+                  <h3 class="post-title">
+                    单例
+                  </h3>
+                </a>
+              </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/java">java</a>
+
             
-              <a class="tag" href="https://shreksun.github.io//tag/idea">idea</a>
-            
-              <a class="tag" href="https://shreksun.github.io//tag/mvcc">mvcc</a>
-            
-              <a class="tag" href="https://shreksun.github.io//tag/gridea">Gridea</a>
-            
+
           </div>
+
         </div>
       </div>
     </div>

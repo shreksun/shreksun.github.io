@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | Shrek Sun&#39;s Space</title>
+<title>6.24-6.30ARTS打卡 | Shrek Sun&#39;s Space</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,26 +91,52 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">6.24-6.30ARTS打卡</h2>
+            <div class="post-date">2019-06-30</div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/arts">arts</a>
+            <div class="post-content">
+              <h3 id="algorithm">Algorithm</h3>
+<h3 id="review">Review</h3>
+<p><a href="https://stackoverflow.com/questions/31420780/limit-1-is-very-slow-for-specific-records-using-different-keys">limit-1-is-very-slow-for-specific-records</a></p>
+<p><a href="https://www.percona.com/blog/2006/09/01/mysql-order-by-limit-performance-optimization/">mysql-order-by-limit-performance-optimization</a></p>
+<!--more-->
+<h3 id="tip">Tip</h3>
+<p>Limit order by一起使用时 有时候会出现索引选择的问题 mysql会选择一个概率上的最优解 有时候会选错</p>
+<p>需要指定索引</p>
+<p>例子：</p>
+<p><code>SELECT * FROM A AS OU use index (IX_UserID_Role) INNER JOIN B AS OFF ON OU.OfflineActivityID = OFF.OfflineActivityID WHERE OU.UserID = xxx AND OFF.Type NOT IN (11,13) ORDER BY OU.AddTime DESC LIMIT 5</code></p>
+<p>在limit比较小时使用的是addtime做索引 查询时间1.几秒</p>
+<p>limit较大时使用UserID做索引</p>
+<p>强制指定use index (IX_UserID_Role)索引后200ms以内</p>
+<h3 id="share">Share</h3>
+<p><a href="https://mp.weixin.qq.com/s/dKowmnYSV6cetfP1nXVRoQ">全面理解 RPC 远程调用</a></p>
+
+            </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/book">book</a>
+              <div class="tag-container">
+                
+                  <a href="https://shreksun.github.io//tag/arts" class="tag">
+                    arts
+                  </a>
+                
+              </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/code">code</a>
             
-              <a class="tag" href="https://shreksun.github.io//tag/jvm">JVM</a>
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://shreksun.github.io//post/6.17-6.23ARTS打卡">
+                  <h3 class="post-title">
+                    6.17-6.23ARTS打卡
+                  </h3>
+                </a>
+              </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/java">java</a>
+
             
-              <a class="tag" href="https://shreksun.github.io//tag/idea">idea</a>
-            
-              <a class="tag" href="https://shreksun.github.io//tag/mvcc">mvcc</a>
-            
-              <a class="tag" href="https://shreksun.github.io//tag/gridea">Gridea</a>
-            
+
           </div>
+
         </div>
       </div>
     </div>

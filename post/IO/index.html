@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>IO | Shrek Sun&#39;s Space</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://shreksun.github.io//favicon.ico?v=1563116382040">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://shreksun.github.io//styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://shreksun.github.io/">
+        <img src="https://shreksun.github.io//images/avatar.png?v=1563116382040" class="site-logo">
+        <h1 class="site-title">Shrek Sun&#39;s Space</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://shreksun.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">IO</h2>
+            <div class="post-date">2019-03-07</div>
+            
+            <div class="post-content">
+              <h4 id="输入字节流inputstream">输入字节流InputStream:</h4>
+<ul>
+<li><strong>ByteArrayInputStream、StringBufferInputStream、FileInputStream</strong> 是三种基本的介质流，它们分别从Byte 数组、StringBuffer、和本地文件中读取数据。</li>
+<li><strong>PipedInputStream</strong> 是从与其它线程共用的管道中读取数据。PipedInputStream的一个实例要和PipedOutputStream的一个实例共同使用，共同完成管道的读取写入操作。主要用于线程操作。</li>
+<li><strong>DataInputStream</strong>： 将基础数据类型读取出来</li>
+<li><strong>ObjectInputStream</strong> 和所有 <strong>FilterInputStream</strong> 的子类都是装饰流（装饰器模式的主角）。</li>
+</ul>
+<!--more-->
+<h4 id="输出字节流outputstream">输出字节流OutputStream：</h4>
+<ul>
+<li><strong>ByteArrayOutputStream</strong>、<strong>FileOutputStream</strong>： 是两种基本的介质流，它们分别向- Byte 数组、和本地文件中写入数据。</li>
+<li><strong>PipedOutputStream</strong> 是向与其它线程共用的管道中写入数据。</li>
+<li><strong>DataOutputStream</strong> 将基础数据类型写入到文件中</li>
+<li><strong>ObjectOutputStream</strong> 和所有 <strong>FilterOutputStream</strong> 的子类都是装饰流。</li>
+</ul>
+<h4 id="字符输入流reader">字符输入流Reader：</h4>
+<ul>
+<li><strong>FileReader、CharReader、StringReader</strong> 是三种基本的介质流，它们分在本地文件、Char 数组、String中读取数据。</li>
+<li><strong>PipedReader</strong>：是从与其它线程共用的管道中读取数据</li>
+<li><strong>BufferedReader</strong> ：加缓冲功能，避免频繁读写硬盘</li>
+<li><strong>InputStreamReader</strong>： 是一个连接字节流和字符流的桥梁，它将字节流转变为字符流。</li>
+</ul>
+<h4 id="字符输出流writer">字符输出流Writer：</h4>
+<ul>
+<li><strong>StringWriter</strong>:向String 中写入数据。</li>
+<li><strong>CharArrayWriter</strong>：实现一个可用作字符输入流的字符缓冲区</li>
+<li><strong>PipedWriter</strong>:是向与其它线程共用的管道中写入数据</li>
+<li><strong>BufferedWriter</strong> ： 增加缓冲功能，避免频繁读写硬盘。</li>
+<li><strong>PrintWriter</strong> 和<strong>PrintStream</strong> 将对象的格式表示打印到文本输出流。 极其类似，功能和使用也非常相似</li>
+<li><strong>OutputStreamWriter</strong>： 是OutputStream 到Writer 转换的桥梁，它的子类FileWriter 其实就是一个实现此功能的具体类（具体可以研究一SourceCode）。功能和使用和OutputStream 极其类似，后面会有它们的对应图。</li>
+</ul>
+<h4 id="nio">NIO</h4>
+<ul>
+<li>NIO是面向缓冲区，IO是面向流的。</li>
+<li>非阻塞IO</li>
+<li>有选择器</li>
+</ul>
+<p>源引<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&amp;mid=2247483981&amp;idx=1&amp;sn=6e5c682d76972c8d2cf271a85dcf09e2&amp;chksm=fd98542ccaefdd3a70428e9549bc33e8165836855edaa748928d16c1ebde9648579d3acaac10#rd">Java IO，硬骨头也能变软</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&amp;mid=2247483956&amp;idx=1&amp;sn=57692bc5b7c2c6dfb812489baadc29c9&amp;chksm=fd985455caefdd4331d828d8e89b22f19b304aa87d6da73c5d8c66fcef16e4c0b448b1a6f791#rd">Java NIO 概览</a></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://shreksun.github.io//tag/java" class="tag">
+                    java
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://shreksun.github.io//post/java类加载机制">
+                  <h3 class="post-title">
+                    java类加载机制
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

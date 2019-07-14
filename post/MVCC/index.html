@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | Shrek Sun&#39;s Space</title>
+<title>MVCC | Shrek Sun&#39;s Space</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,26 +91,60 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">MVCC</h2>
+            <div class="post-date">2019-03-08</div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/arts">arts</a>
+            <div class="post-content">
+              <h4 id="定义">定义</h4>
+<p>多版本并发控制，读不加锁，每次读最新的快照。一条数据记录的时候，它不会直接用新数据覆盖旧数据，而是将旧数据标记为过时（obsolete）并在别处增加新版本的数据。这样就会有存储多个版本的数据，但是只有一个是最新的。</p>
+<!--more-->
+<h4 id="实现">实现</h4>
+<p>innoDB的MVCC,是通过在每行记录后面保存两个隐藏的列来实现的,这两个列，分别保存了这个行的<strong>创建时间（创建时版本号）</strong>，一个保存的是行的<strong>删除时间（删除时版本号）</strong>。</p>
+<ul>
+<li>
+<p><strong>INSERT</strong> InnoDB为新插入的每一行保存当前系统版本号作为版本号.</p>
+</li>
+<li>
+<p><strong>SELECT</strong> a. 只会查找版本早于或等于当前事务版本的</p>
+<p>​	       b. 删除版本要么未定义，要么大于当前版本</p>
+<p>​	       同时满足a. b.才会作为返回结果</p>
+</li>
+<li>
+<p><strong>DELETE</strong> InnoDB会为删除的每一行保存当前系统的版本号(事务的ID)作为删除标识.</p>
+</li>
+<li>
+<p><strong>UPDATE</strong> InnoDB执行UPDATE，<strong>实际上是新插入了一行记录，并保存其创建时间为当前事务的ID，同时保存当前事务ID到要UPDATE的行的删除时间</strong>.</p>
+</li>
+</ul>
+<p>参考：</p>
+<p><a href="https://blog.csdn.net/yajie_12/article/details/80453863">什么是MVCC </a></p>
+
+            </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/book">book</a>
+              <div class="tag-container">
+                
+                  <a href="https://shreksun.github.io//tag/mvcc" class="tag">
+                    mvcc
+                  </a>
+                
+              </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/code">code</a>
             
-              <a class="tag" href="https://shreksun.github.io//tag/jvm">JVM</a>
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://shreksun.github.io//post/jvm内存结构">
+                  <h3 class="post-title">
+                    jvm内存结构
+                  </h3>
+                </a>
+              </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/java">java</a>
+
             
-              <a class="tag" href="https://shreksun.github.io//tag/idea">idea</a>
-            
-              <a class="tag" href="https://shreksun.github.io//tag/mvcc">mvcc</a>
-            
-              <a class="tag" href="https://shreksun.github.io//tag/gridea">Gridea</a>
-            
+
           </div>
+
         </div>
       </div>
     </div>

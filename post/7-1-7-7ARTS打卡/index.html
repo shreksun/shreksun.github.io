@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | Shrek Sun&#39;s Space</title>
+<title>7.1-7.7ARTS打卡 | Shrek Sun&#39;s Space</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,26 +91,82 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">7.1-7.7ARTS打卡</h2>
+            <div class="post-date">2019-07-07</div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/arts">arts</a>
+            <div class="post-content">
+              <h3 id="algorithm">Algorithm</h3>
+<p><a href="https://leetcode-cn.com/problems/max-increase-to-keep-city-skyline/">max-increase-to-keep-city-skyline</a></p>
+<!--more-->
+<pre><code class="language-java">   public int maxIncreaseKeepingSkyline(int[][] grid) {
+        ArrayList&lt;Integer&gt; maxCols = new ArrayList&lt;Integer&gt;();
+        ArrayList&lt;Integer&gt; maxLines = new ArrayList&lt;Integer&gt;();
+        for (int i = 0; i &lt; grid.length; i++) {
+            int maxLine = 0;
+            int maxCol = 0;
+            for (int j = 0; j &lt; grid[0].length; j++) {
+                if (maxLine &lt; grid[i][j]) {
+                    maxLine = grid[i][j];
+                }
+                if (maxCol &lt; grid[j][i]) {
+                    maxCol = grid[j][i];
+                }
+            }
+            maxLines.add(maxLine);
+            maxCols.add(maxCol);
+        }
+        int count = 0;
+        for (int i = 0; i &lt; grid.length; i++) {
+            for (int j = 0; j &lt; grid[0].length; j++) {
+               if (maxLines.get(i) &lt; maxCols.get(j)) {
+                   count += maxLines.get(i) - grid[i][j];
+               } else {
+                   count += maxCols.get(j) - grid[i][j];
+               }
+            }
+
+        }
+        return count;
+    }
+}
+</code></pre>
+<h3 id="review">Review</h3>
+<p><a href="https://www.programcreek.com/2012/04/java-vs-python-why-python-can-be-more-productive/">Java vs. Python (1): Simple Code Examples</a></p>
+<h3 id="tip">Tip</h3>
+<p>Mysql 在 8.0 版本之前 可以用</p>
+<p><code>show profile；</code></p>
+<p>查询上次查询的执行时间</p>
+<p><code>select @@profiling; 查看是否开启</code></p>
+<p><code>set profiling=1; 开启</code></p>
+<h3 id="share">Share</h3>
+<p><a href="https://www.infoq.cn/article/t-JqP7vrgPJkk9RFZWrz">学会用数据库的方式思考 SQL 是如何执行的</a></p>
+
+            </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/book">book</a>
+              <div class="tag-container">
+                
+                  <a href="https://shreksun.github.io//tag/arts" class="tag">
+                    arts
+                  </a>
+                
+              </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/code">code</a>
             
-              <a class="tag" href="https://shreksun.github.io//tag/jvm">JVM</a>
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://shreksun.github.io//post/代码整洁之道记录">
+                  <h3 class="post-title">
+                    代码整洁之道记录
+                  </h3>
+                </a>
+              </div>
             
-              <a class="tag" href="https://shreksun.github.io//tag/java">java</a>
+
             
-              <a class="tag" href="https://shreksun.github.io//tag/idea">idea</a>
-            
-              <a class="tag" href="https://shreksun.github.io//tag/mvcc">mvcc</a>
-            
-              <a class="tag" href="https://shreksun.github.io//tag/gridea">Gridea</a>
-            
+
           </div>
+
         </div>
       </div>
     </div>

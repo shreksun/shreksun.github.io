@@ -94,15 +94,15 @@
           
             <article class="post-item">
               <div class="left">
-                <a href="https://shreksun.github.io//post/7-8-7-14ARTS打卡">
-                  <h2 class="post-title">7.8-7.14ARTS打卡</h2>
+                <a href="https://shreksun.github.io//post/jvm监控">
+                  <h2 class="post-title">jvm监控</h2>
                 </a>
                 <div class="post-date">
-                  2019-07-13
+                  2019-04-18
                 </div>
                 <div class="post-abstract">
-                  <h3 id="algorithm">Algorithm</h3>
-<p><a href="https://leetcode-cn.com/problems/counting-bits/submissions/">counting-bits</a></p>
+                  <p>jcmd -l 查看进程</p>
+<p>jstat -gc 34291 查看进程34291 gc情况</p>
 
                 </div>
               </div>
@@ -111,16 +111,14 @@
           
             <article class="post-item">
               <div class="left">
-                <a href="https://shreksun.github.io//post/7-1-7-7ARTS打卡">
-                  <h2 class="post-title">7.1-7.7ARTS打卡</h2>
+                <a href="https://shreksun.github.io//post/快捷键">
+                  <h2 class="post-title">快捷键</h2>
                 </a>
                 <div class="post-date">
-                  2019-07-07
+                  2019-04-12
                 </div>
                 <div class="post-abstract">
-                  <h3 id="algorithm">Algorithm</h3>
-<p><a href="https://leetcode-cn.com/problems/max-increase-to-keep-city-skyline/">max-increase-to-keep-city-skyline</a></p>
-
+                  
                 </div>
               </div>
               
@@ -128,19 +126,38 @@
           
             <article class="post-item">
               <div class="left">
-                <a href="https://shreksun.github.io//post/代码整洁之道记录">
-                  <h2 class="post-title">代码整洁之道记录</h2>
+                <a href="https://shreksun.github.io//post/jar包冲突">
+                  <h2 class="post-title">jar包冲突</h2>
                 </a>
                 <div class="post-date">
-                  2019-07-02
+                  2019-03-13
                 </div>
                 <div class="post-abstract">
-                  <h3 id="命名">命名</h3>
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://shreksun.github.io//post/并发编程">
+                  <h2 class="post-title">并发编程</h2>
+                </a>
+                <div class="post-date">
+                  2019-03-12
+                </div>
+                <div class="post-abstract">
+                  <h4 id="对象共享">对象共享</h4>
 <ul>
-<li>接口尽量不要加前缀</li>
-<li>类名和对象名使用名词 方法使用动词</li>
-<li>在同一个项目内，表达相同概念的名字尽量统一如(fetch，retrieve，get)</li>
-<li>变量过多时使用一个类来组合。</li>
+<li>加锁不仅是互斥行为，还保证了内存的可见性。为了所有线程都能看到共享变量的最新值，执行这个值的读写操作必须保持同一个锁。</li>
+<li>volatile
+<ul>
+<li>变量不会被缓存，被标记的变量读取时保证最新值。比加锁轻的同步。</li>
+<li>使用在需要确保它们自身状态的可见性的地方,标记重要的程序生命周期。</li>
+<li>不保证原子性，只保证可见性。</li>
+</ul>
+</li>
 </ul>
 
                 </div>
@@ -150,33 +167,16 @@
           
             <article class="post-item">
               <div class="left">
-                <a href="https://shreksun.github.io//post/6-24-6-30ARTS打卡">
-                  <h2 class="post-title">6.24-6.30ARTS打卡</h2>
+                <a href="https://shreksun.github.io//post/MVCC">
+                  <h2 class="post-title">MVCC</h2>
                 </a>
                 <div class="post-date">
-                  2019-06-30
+                  2019-03-08
                 </div>
                 <div class="post-abstract">
-                  <h3 id="algorithm">Algorithm</h3>
-<h3 id="review">Review</h3>
-<p><a href="https://stackoverflow.com/questions/31420780/limit-1-is-very-slow-for-specific-records-using-different-keys">limit-1-is-very-slow-for-specific-records</a></p>
-<p><a href="https://www.percona.com/blog/2006/09/01/mysql-order-by-limit-performance-optimization/">mysql-order-by-limit-performance-optimization</a></p>
+                  <h4 id="定义">定义</h4>
+<p>多版本并发控制，读不加锁，每次读最新的快照。一条数据记录的时候，它不会直接用新数据覆盖旧数据，而是将旧数据标记为过时（obsolete）并在别处增加新版本的数据。这样就会有存储多个版本的数据，但是只有一个是最新的。</p>
 
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://shreksun.github.io//post/6.17-6.23ARTS打卡">
-                  <h2 class="post-title">6.17-6.23ARTS打卡</h2>
-                </a>
-                <div class="post-date">
-                  2019-06-23
-                </div>
-                <div class="post-abstract">
-                  
                 </div>
               </div>
               
@@ -185,8 +185,10 @@
 
           <div class="pagination-container">
   
+    <a href="https://shreksun.github.io//page/2/" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
   
-    <a href="https://shreksun.github.io//page/2/" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
+  
+    <a href="https://shreksun.github.io//page/4/" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
   
 </div>
 

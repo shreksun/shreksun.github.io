@@ -94,15 +94,16 @@
           
             <article class="post-item">
               <div class="left">
-                <a href="https://shreksun.github.io//post/7-8-7-14ARTS打卡">
-                  <h2 class="post-title">7.8-7.14ARTS打卡</h2>
+                <a href="https://shreksun.github.io//post/6-10-6-16ARTS打卡">
+                  <h2 class="post-title">6.10-6.16ARTS打卡</h2>
                 </a>
                 <div class="post-date">
-                  2019-07-13
+                  2019-06-13
                 </div>
                 <div class="post-abstract">
                   <h3 id="algorithm">Algorithm</h3>
-<p><a href="https://leetcode-cn.com/problems/counting-bits/submissions/">counting-bits</a></p>
+<p>给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。</p>
+<p>说明：解集不能包含重复的子集。</p>
 
                 </div>
               </div>
@@ -111,36 +112,18 @@
           
             <article class="post-item">
               <div class="left">
-                <a href="https://shreksun.github.io//post/7-1-7-7ARTS打卡">
-                  <h2 class="post-title">7.1-7.7ARTS打卡</h2>
+                <a href="https://shreksun.github.io//post/hexo-记录">
+                  <h2 class="post-title">hexo 记录</h2>
                 </a>
                 <div class="post-date">
-                  2019-07-07
+                  2019-06-04
                 </div>
                 <div class="post-abstract">
-                  <h3 id="algorithm">Algorithm</h3>
-<p><a href="https://leetcode-cn.com/problems/max-increase-to-keep-city-skyline/">max-increase-to-keep-city-skyline</a></p>
-
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://shreksun.github.io//post/代码整洁之道记录">
-                  <h2 class="post-title">代码整洁之道记录</h2>
-                </a>
-                <div class="post-date">
-                  2019-07-02
-                </div>
-                <div class="post-abstract">
-                  <h3 id="命名">命名</h3>
-<ul>
-<li>接口尽量不要加前缀</li>
-<li>类名和对象名使用名词 方法使用动词</li>
-<li>在同一个项目内，表达相同概念的名字尽量统一如(fetch，retrieve，get)</li>
-<li>变量过多时使用一个类来组合。</li>
+                  <ul>
+<li>
+<p>20190604</p>
+<p>无法推送theme到git，查了一下发现是因为主题也是git clone下来的 所以无法推送，进入到该主题目录下，<code>rm -rf .git</code>清除主题git，可以推送到git</p>
+</li>
 </ul>
 
                 </div>
@@ -150,17 +133,19 @@
           
             <article class="post-item">
               <div class="left">
-                <a href="https://shreksun.github.io//post/6-24-6-30ARTS打卡">
-                  <h2 class="post-title">6.24-6.30ARTS打卡</h2>
+                <a href="https://shreksun.github.io//post/code">
+                  <h2 class="post-title">code</h2>
                 </a>
                 <div class="post-date">
-                  2019-06-30
+                  2019-05-22
                 </div>
                 <div class="post-abstract">
-                  <h3 id="algorithm">Algorithm</h3>
-<h3 id="review">Review</h3>
-<p><a href="https://stackoverflow.com/questions/31420780/limit-1-is-very-slow-for-specific-records-using-different-keys">limit-1-is-very-slow-for-specific-records</a></p>
-<p><a href="https://www.percona.com/blog/2006/09/01/mysql-order-by-limit-performance-optimization/">mysql-order-by-limit-performance-optimization</a></p>
+                  <h4 id="拷贝具有大量相同属性的类">拷贝具有大量相同属性的类</h4>
+<pre><code class="language-java">//拷贝到target
+public static void copyProperties(Object source, Object target) throws BeansException {
+		copyProperties(source, target, null, null);
+	}
+</code></pre>
 
                 </div>
               </div>
@@ -169,14 +154,50 @@
           
             <article class="post-item">
               <div class="left">
-                <a href="https://shreksun.github.io//post/6.17-6.23ARTS打卡">
-                  <h2 class="post-title">6.17-6.23ARTS打卡</h2>
+                <a href="https://shreksun.github.io//post/虚拟机字节码执行引擎">
+                  <h2 class="post-title">虚拟机字节码执行引擎</h2>
                 </a>
                 <div class="post-date">
-                  2019-06-23
+                  2019-05-20
                 </div>
                 <div class="post-abstract">
-                  
+                  <h4 id="局部变量表">局部变量表</h4>
+<ul>
+<li>以变量槽slot为最小单位，某个变量超出变量域可以被回收给其他变量使用。</li>
+<li>局部变量定义无赋值不可使用。</li>
+</ul>
+<h4 id="操作数栈">操作数栈</h4>
+<ul>
+<li>入栈出栈就是方法执行的过程。</li>
+<li>数据类型必须和字节码指令的序列严格匹配。</li>
+</ul>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://shreksun.github.io//post/单例">
+                  <h2 class="post-title">单例</h2>
+                </a>
+                <div class="post-date">
+                  2019-04-29
+                </div>
+                <div class="post-abstract">
+                  <pre><code class="language-java">private SingletonPattern() {
+}
+
+private static class SingletonPatternHolder {
+    private static final SingletonPattern singletonPattern = new SingletonPattern();
+}
+
+public static SingletonPattern getInstance() {
+    return SingletonPatternHolder.singletonPattern;
+}
+</code></pre>
+
                 </div>
               </div>
               
@@ -185,8 +206,10 @@
 
           <div class="pagination-container">
   
+    <a href="https://shreksun.github.io//" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
   
-    <a href="https://shreksun.github.io//page/2/" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
+  
+    <a href="https://shreksun.github.io//page/3/" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
   
 </div>
 
