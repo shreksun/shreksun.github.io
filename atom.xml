@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shreksun.github.io/</id>
     <title>Shrek Sun&apos;s Space</title>
-    <updated>2019-07-14T15:03:38.072Z</updated>
+    <updated>2019-07-15T07:04:26.713Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shreksun.github.io/"/>
     <link rel="self" href="https://shreksun.github.io//atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://shreksun.github.io//images/avatar.png</logo>
     <icon>https://shreksun.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Shrek Sun&apos;s Space</rights>
+    <entry>
+        <title type="html"><![CDATA[git 问题记录]]></title>
+        <id>https://shreksun.github.io//post/git-wen-ti-ji-lu</id>
+        <link href="https://shreksun.github.io//post/git-wen-ti-ji-lu">
+        </link>
+        <updated>2019-07-14T15:55:43.000Z</updated>
+        <content type="html"><![CDATA[<p>同一个电脑连接两个github账号导致不能推送问题
+https://blog.csdn.net/lwc863481702/article/details/78542727?utm_source=blogxgwz6
+https://www.jianshu.com/p/f44ec31be799</p>
+<!-- more -->]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[7.8-7.14ARTS打卡]]></title>
         <id>https://shreksun.github.io//post/7-8-7-14ARTS打卡</id>
@@ -347,38 +358,6 @@ public static void copyProperties(Object source, Object target) throws BeansExce
 <li>正常退出，调用者的pc计数器值就是返回地址，栈帧中会保存。</li>
 <li>异常退出时，返回地址通过异常处理器决定。</li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[单例]]></title>
-        <id>https://shreksun.github.io//post/单例</id>
-        <link href="https://shreksun.github.io//post/单例">
-        </link>
-        <updated>2019-04-29T02:25:35.000Z</updated>
-        <summary type="html"><![CDATA[<pre><code class="language-java">private SingletonPattern() {
-}
-
-private static class SingletonPatternHolder {
-    private static final SingletonPattern singletonPattern = new SingletonPattern();
-}
-
-public static SingletonPattern getInstance() {
-    return SingletonPatternHolder.singletonPattern;
-}
-</code></pre>
-]]></summary>
-        <content type="html"><![CDATA[<pre><code class="language-java">private SingletonPattern() {
-}
-
-private static class SingletonPatternHolder {
-    private static final SingletonPattern singletonPattern = new SingletonPattern();
-}
-
-public static SingletonPattern getInstance() {
-    return SingletonPatternHolder.singletonPattern;
-}
-</code></pre>
-<!--more-->
 ]]></content>
     </entry>
 </feed>

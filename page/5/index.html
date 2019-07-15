@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>6.10-6.16ARTS打卡 | Shrek Sun&#39;s Space</title>
+<title>Shrek Sun&#39;s Space</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,77 +91,36 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">6.10-6.16ARTS打卡</h2>
-            <div class="post-date">2019-06-13</div>
-            
-            <div class="post-content">
-              <h3 id="algorithm">Algorithm</h3>
-<p>给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。</p>
-<p>说明：解集不能包含重复的子集。</p>
-<!--more-->
-<p>示例:</p>
-<p>输出:
-[
-[3],
-[1],
-[2],
-[1,2,3],
-[1,3],
-[2,3],
-[1,2],
-[]
-]</p>
-<pre><code class="language-java">class Solution {
-    public List&lt;List&lt;Integer&gt;&gt; subsets(int[] nums) {
-        List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;List&lt;Integer&gt;&gt;();
-        result.add(new ArrayList&lt;Integer&gt;());
-        for(Integer n: nums) {
-            int size = result.size();
-            for(int i = 0; i &lt; size; i++) {
-                List&lt;Integer&gt; newSub = new ArrayList&lt;&gt;(result.get(i));
-                newSub.add(n);
-                result.add(newSub);
-            }
-        }
-        return result;
-    }
-}
-</code></pre>
-<h3 id="review">Review</h3>
-<p><a href="https://www.programcreek.com/2013/12/what-exactly-is-null-in-java/">What exactly is null in Java?</a></p>
-<p>null不是一个具体的实例对象，只是一个值表示变量没有引用</p>
-<p>null具体存储在栈帧</p>
-<h3 id="tip">Tip</h3>
-<p>Error while compiling statement: FAILED: SemanticException [Error 10041]: No partition predicate found for Alias</p>
-<p>hive严格查询要求查询语句中必须使用partition key</p>
-<h3 id="share">Share</h3>
-<p><a href="https://www.infoq.cn/article/djP0ux_KOm9Kr3XohWL7?from=singlemessage&amp;isappinstalled=0">互联网女皇报告解读：移动开发进入拐点，云计算正当时</a></p>
-
-            </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://shreksun.github.io//tag/arts" class="tag">
-                    arts
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://shreksun.github.io//post/hexo-记录">
-                  <h3 class="post-title">
-                    hexo 记录
-                  </h3>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://shreksun.github.io//post/hello-gridea">
+                  <h2 class="post-title">Hello Gridea</h2>
                 </a>
+                <div class="post-date">
+                  2018-12-12
+                </div>
+                <div class="post-abstract">
+                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+
+                </div>
               </div>
-            
+              
+                <a class="right" href="https://shreksun.github.io//post/hello-gridea">
+                  <div class="feature-container" style="background-image: url('https://shreksun.github.io//post-images/hello-gridea.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
 
-            
-
-          </div>
+          <div class="pagination-container">
+  
+    <a href="https://shreksun.github.io//page/4/" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
+  
+  
+</div>
 
         </div>
       </div>

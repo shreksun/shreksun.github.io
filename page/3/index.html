@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://shreksun.github.io//favicon.ico?v=1563116616065">
+<link rel="shortcut icon" href="https://shreksun.github.io//favicon.ico?v=1563174264962">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://shreksun.github.io//styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://shreksun.github.io/">
-        <img src="https://shreksun.github.io//images/avatar.png?v=1563116616065" class="site-logo">
+        <img src="https://shreksun.github.io//images/avatar.png?v=1563174264962" class="site-logo">
         <h1 class="site-title">Shrek Sun&#39;s Space</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -91,6 +91,32 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://shreksun.github.io//post/单例">
+                  <h2 class="post-title">单例</h2>
+                </a>
+                <div class="post-date">
+                  2019-04-29
+                </div>
+                <div class="post-abstract">
+                  <pre><code class="language-java">private SingletonPattern() {
+}
+
+private static class SingletonPatternHolder {
+    private static final SingletonPattern singletonPattern = new SingletonPattern();
+}
+
+public static SingletonPattern getInstance() {
+    return SingletonPatternHolder.singletonPattern;
+}
+</code></pre>
+
+                </div>
+              </div>
+              
+            </article>
           
             <article class="post-item">
               <div class="left">
@@ -159,23 +185,6 @@
 </ul>
 </li>
 </ul>
-
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://shreksun.github.io//post/MVCC">
-                  <h2 class="post-title">MVCC</h2>
-                </a>
-                <div class="post-date">
-                  2019-03-08
-                </div>
-                <div class="post-abstract">
-                  <h4 id="定义">定义</h4>
-<p>多版本并发控制，读不加锁，每次读最新的快照。一条数据记录的时候，它不会直接用新数据覆盖旧数据，而是将旧数据标记为过时（obsolete）并在别处增加新版本的数据。这样就会有存储多个版本的数据，但是只有一个是最新的。</p>
 
                 </div>
               </div>
