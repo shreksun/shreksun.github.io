@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shreksun.github.io/</id>
-    <title>Shrek Sun&apos;s Space</title>
-    <updated>2019-07-15T07:06:57.288Z</updated>
+    <title>Shrek Sun</title>
+    <updated>2019-07-15T08:00:24.589Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shreksun.github.io/"/>
     <link rel="self" href="https://shreksun.github.io//atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>神在细节中</subtitle>
     <logo>https://shreksun.github.io//images/avatar.png</logo>
     <icon>https://shreksun.github.io//favicon.ico</icon>
-    <rights>All rights reserved 2019, Shrek Sun&apos;s Space</rights>
+    <rights>All rights reserved 2019, Shrek Sun</rights>
     <entry>
         <title type="html"><![CDATA[git 问题记录]]></title>
         <id>https://shreksun.github.io//post/git-wen-ti-ji-lu</id>
         <link href="https://shreksun.github.io//post/git-wen-ti-ji-lu">
         </link>
         <updated>2019-07-14T15:55:43.000Z</updated>
-        <summary type="html"><![CDATA[<p>同一个电脑连接两个github账号导致不能推送问题
-<a href="https://blog.csdn.net/lwc863481702/article/details/78542727?utm_source=blogxgwz6">git使用中遇到的remote：Permission to xxx denied to xxx问题</a>
-<a href="https://www.jianshu.com/p/f44ec31be799">解决git push 中remote: Permission to xxxxx.git denied to xxx</a></p>
+        <summary type="html"><![CDATA[<p>同一个电脑连接两个github账号导致不能推送问题</p>
+<ul>
+<li><a href="https://blog.csdn.net/lwc863481702/article/details/78542727?utm_source=blogxgwz6">git使用中遇到的remote：Permission to xxx denied to xxx问题</a></li>
+<li><a href="https://www.jianshu.com/p/f44ec31be799">解决git push 中remote: Permission to xxxxx.git denied to xxx</a></li>
+</ul>
 ]]></summary>
-        <content type="html"><![CDATA[<p>同一个电脑连接两个github账号导致不能推送问题
-<a href="https://blog.csdn.net/lwc863481702/article/details/78542727?utm_source=blogxgwz6">git使用中遇到的remote：Permission to xxx denied to xxx问题</a>
-<a href="https://www.jianshu.com/p/f44ec31be799">解决git push 中remote: Permission to xxxxx.git denied to xxx</a></p>
+        <content type="html"><![CDATA[<p>同一个电脑连接两个github账号导致不能推送问题</p>
+<ul>
+<li><a href="https://blog.csdn.net/lwc863481702/article/details/78542727?utm_source=blogxgwz6">git使用中遇到的remote：Permission to xxx denied to xxx问题</a></li>
+<li><a href="https://www.jianshu.com/p/f44ec31be799">解决git push 中remote: Permission to xxxxx.git denied to xxx</a></li>
+</ul>
 <!-- more -->
 <p>1</p>
 ]]></content>
