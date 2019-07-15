@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shreksun.github.io/</id>
     <title>Shrek Sun&apos;s Space</title>
-    <updated>2019-07-15T07:05:06.101Z</updated>
+    <updated>2019-07-15T07:06:57.288Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shreksun.github.io/"/>
     <link rel="self" href="https://shreksun.github.io//atom.xml"/>
@@ -16,10 +16,16 @@
         <link href="https://shreksun.github.io//post/git-wen-ti-ji-lu">
         </link>
         <updated>2019-07-14T15:55:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>同一个电脑连接两个github账号导致不能推送问题
+<a href="https://blog.csdn.net/lwc863481702/article/details/78542727?utm_source=blogxgwz6">git使用中遇到的remote：Permission to xxx denied to xxx问题</a>
+<a href="https://www.jianshu.com/p/f44ec31be799">解决git push 中remote: Permission to xxxxx.git denied to xxx</a></p>
+]]></summary>
         <content type="html"><![CDATA[<p>同一个电脑连接两个github账号导致不能推送问题
-https://blog.csdn.net/lwc863481702/article/details/78542727?utm_source=blogxgwz6
-https://www.jianshu.com/p/f44ec31be799</p>
-<!-- more -->]]></content>
+<a href="https://blog.csdn.net/lwc863481702/article/details/78542727?utm_source=blogxgwz6">git使用中遇到的remote：Permission to xxx denied to xxx问题</a>
+<a href="https://www.jianshu.com/p/f44ec31be799">解决git push 中remote: Permission to xxxxx.git denied to xxx</a></p>
+<!-- more -->
+<p>1</p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[7.8-7.14ARTS打卡]]></title>
