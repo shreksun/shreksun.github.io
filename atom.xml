@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shreksun.github.io/</id>
     <title>Shrek Sun</title>
-    <updated>2019-07-15T08:12:46.883Z</updated>
+    <updated>2019-07-17T02:10:33.970Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shreksun.github.io/"/>
     <link rel="self" href="https://shreksun.github.io//atom.xml"/>
@@ -186,6 +186,18 @@ public int[] countBits2(int num) {
 <li>如果对输入参数进行转换最好体现在返回值</li>
 <li>最好把try catch分离出来另外封函数</li>
 <li>逐步打磨函数</li>
+</ul>
+<h3 id="注释">注释</h3>
+<ul>
+<li>尽量使代码能够自解释（通过命名，函数）</li>
+<li>注释掉的代码及时清除</li>
+<li>定期查看todo 删除不必要的</li>
+</ul>
+<h3 id="格式">格式</h3>
+<ul>
+<li>垂直格式使相关函数距离较近</li>
+<li>横向不要超过120</li>
+<li>使用团队规则</li>
 </ul>
 ]]></content>
     </entry>
