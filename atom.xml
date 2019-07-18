@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shreksun.github.io/</id>
     <title>Shrek Sun</title>
-    <updated>2019-07-17T02:10:33.970Z</updated>
+    <updated>2019-07-18T10:37:11.905Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shreksun.github.io/"/>
     <link rel="self" href="https://shreksun.github.io//atom.xml"/>
@@ -198,6 +198,12 @@ public int[] countBits2(int num) {
 <li>垂直格式使相关函数距离较近</li>
 <li>横向不要超过120</li>
 <li>使用团队规则</li>
+</ul>
+<h3 id="数据传送对象">数据传送对象</h3>
+<ul>
+<li>需要添加新数据类型时 面向对象比较合适</li>
+<li>需要添加新函数时 过程式代码更合适</li>
+<li>避免连串调用</li>
 </ul>
 ]]></content>
     </entry>
