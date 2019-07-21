@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>快捷键 | Shrek Sun</title>
+<title>7.15-7.21ARTS打卡 | Shrek Sun</title>
 <meta name="description" content="神在细节中">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,25 +92,53 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">快捷键</h2>
-            <div class="post-date">2019-04-12</div>
+            <h2 class="post-title">7.15-7.21ARTS打卡</h2>
+            <div class="post-date">2019-07-21</div>
             
             <div class="post-content">
-              <h4 id="idea插件快捷键">idea插件快捷键</h4>
-<ul>
-<li>
-<p>GenerateAllSetter 一键生成所有set</p>
-<p><code>User user = new User();</code>
-<code>then alt+enter on User</code></p>
-</li>
-</ul>
+              <h3 id="algorithm">Algorithm</h3>
+<p><a href="https://leetcode-cn.com/problems/generate-parentheses/submissions/">generate-parentheses</a></p>
 <!--more-->
+<pre><code class="language-java">   class Solution {
+    public List&lt;String&gt; generateParenthesis(int n) {
+        List&lt;String&gt; result = new ArrayList&lt;&gt;();
+        StringBuilder parenthesis = new StringBuilder();
+        int left = n ;
+        int right = n ;
+        buildParenthesis(result, parenthesis, left, right);
+        return result; 
+    }
+    private void buildParenthesis(List&lt;String&gt; result, StringBuilder parenthesis, int left, int right) {
+        if (left &gt; 0) {
+            buildParenthesis(result, parenthesis.append(&quot;(&quot;), --left, right);
+            parenthesis.delete(parenthesis.length() - 1, parenthesis.length());
+            ++left;
+        }
+        if (right &gt; 0 &amp;&amp; right &gt; left) {
+            buildParenthesis(result, parenthesis.append(&quot;)&quot;), left, --right);
+            parenthesis.delete(parenthesis.length() - 1, parenthesis.length());
+            ++right;
+        }
+        if (right == 0) {
+            result.add(parenthesis.toString());
+            return;
+        }
+    }  
+}
+</code></pre>
+<h3 id="review">Review</h3>
+<h3 id="tip">Tip</h3>
+<p>map() 将流的元素映射成另一个类型
+collect()：对流的汇总操作，比如输出成List集合</p>
+<h3 id="share">Share</h3>
+<p><a href="https://lw900925.github.io/java/java8-lambda-expression.html">Java 8新特性（一）：Lambda表达式</a></p>
+
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://shreksun.github.io//tag/idea" class="tag">
-                    idea
+                  <a href="https://shreksun.github.io//tag/arts" class="tag">
+                    arts
                   </a>
                 
               </div>
@@ -118,9 +146,9 @@
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://shreksun.github.io//post/jar包冲突">
+                <a href="https://shreksun.github.io//post/git-wen-ti-ji-lu">
                   <h3 class="post-title">
-                    jar包冲突
+                    git 问题记录
                   </h3>
                 </a>
               </div>

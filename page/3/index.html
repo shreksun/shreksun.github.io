@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://shreksun.github.io//favicon.ico?v=1563446229871">
+<link rel="shortcut icon" href="https://shreksun.github.io//favicon.ico?v=1563715539183">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://shreksun.github.io//styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://shreksun.github.io/">
-        <img src="https://shreksun.github.io//images/avatar.png?v=1563446229871" class="site-logo">
+        <img src="https://shreksun.github.io//images/avatar.png?v=1563715539183" class="site-logo">
         <h1 class="site-title">Shrek Sun</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -91,6 +91,31 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://shreksun.github.io//post/虚拟机字节码执行引擎">
+                  <h2 class="post-title">虚拟机字节码执行引擎</h2>
+                </a>
+                <div class="post-date">
+                  2019-05-20
+                </div>
+                <div class="post-abstract">
+                  <h4 id="局部变量表">局部变量表</h4>
+<ul>
+<li>以变量槽slot为最小单位，某个变量超出变量域可以被回收给其他变量使用。</li>
+<li>局部变量定义无赋值不可使用。</li>
+</ul>
+<h4 id="操作数栈">操作数栈</h4>
+<ul>
+<li>入栈出栈就是方法执行的过程。</li>
+<li>数据类型必须和字节码指令的序列严格匹配。</li>
+</ul>
+
+                </div>
+              </div>
+              
+            </article>
           
             <article class="post-item">
               <div class="left">
@@ -160,32 +185,6 @@ public static SingletonPattern getInstance() {
                 </div>
                 <div class="post-abstract">
                   
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://shreksun.github.io//post/并发编程">
-                  <h2 class="post-title">并发编程</h2>
-                </a>
-                <div class="post-date">
-                  2019-03-12
-                </div>
-                <div class="post-abstract">
-                  <h4 id="对象共享">对象共享</h4>
-<ul>
-<li>加锁不仅是互斥行为，还保证了内存的可见性。为了所有线程都能看到共享变量的最新值，执行这个值的读写操作必须保持同一个锁。</li>
-<li>volatile
-<ul>
-<li>变量不会被缓存，被标记的变量读取时保证最新值。比加锁轻的同步。</li>
-<li>使用在需要确保它们自身状态的可见性的地方,标记重要的程序生命周期。</li>
-<li>不保证原子性，只保证可见性。</li>
-</ul>
-</li>
-</ul>
-
                 </div>
               </div>
               

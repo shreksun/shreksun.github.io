@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shreksun.github.io/</id>
     <title>Shrek Sun</title>
-    <updated>2019-07-18T10:37:11.905Z</updated>
+    <updated>2019-07-21T13:25:41.094Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shreksun.github.io/"/>
     <link rel="self" href="https://shreksun.github.io//atom.xml"/>
@@ -10,6 +10,53 @@
     <logo>https://shreksun.github.io//images/avatar.png</logo>
     <icon>https://shreksun.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Shrek Sun</rights>
+    <entry>
+        <title type="html"><![CDATA[7.15-7.21ARTS打卡]]></title>
+        <id>https://shreksun.github.io//post/715-721arts-da-qia</id>
+        <link href="https://shreksun.github.io//post/715-721arts-da-qia">
+        </link>
+        <updated>2019-07-21T13:17:59.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="algorithm">Algorithm</h3>
+<p><a href="https://leetcode-cn.com/problems/generate-parentheses/submissions/">generate-parentheses</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="algorithm">Algorithm</h3>
+<p><a href="https://leetcode-cn.com/problems/generate-parentheses/submissions/">generate-parentheses</a></p>
+<!--more-->
+<pre><code class="language-java">   class Solution {
+    public List&lt;String&gt; generateParenthesis(int n) {
+        List&lt;String&gt; result = new ArrayList&lt;&gt;();
+        StringBuilder parenthesis = new StringBuilder();
+        int left = n ;
+        int right = n ;
+        buildParenthesis(result, parenthesis, left, right);
+        return result; 
+    }
+    private void buildParenthesis(List&lt;String&gt; result, StringBuilder parenthesis, int left, int right) {
+        if (left &gt; 0) {
+            buildParenthesis(result, parenthesis.append(&quot;(&quot;), --left, right);
+            parenthesis.delete(parenthesis.length() - 1, parenthesis.length());
+            ++left;
+        }
+        if (right &gt; 0 &amp;&amp; right &gt; left) {
+            buildParenthesis(result, parenthesis.append(&quot;)&quot;), left, --right);
+            parenthesis.delete(parenthesis.length() - 1, parenthesis.length());
+            ++right;
+        }
+        if (right == 0) {
+            result.add(parenthesis.toString());
+            return;
+        }
+    }  
+}
+</code></pre>
+<h3 id="review">Review</h3>
+<h3 id="tip">Tip</h3>
+<p>map() 将流的元素映射成另一个类型
+collect()：对流的汇总操作，比如输出成List集合</p>
+<h3 id="share">Share</h3>
+<p><a href="https://lw900925.github.io/java/java8-lambda-expression.html">Java 8新特性（一）：Lambda表达式</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[git 问题记录]]></title>
         <id>https://shreksun.github.io//post/git-wen-ti-ji-lu</id>
@@ -346,46 +393,6 @@ public static void copyProperties(Object source, Object target) throws BeansExce
 	}
 </code></pre>
 <!--more-->
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[虚拟机字节码执行引擎]]></title>
-        <id>https://shreksun.github.io//post/虚拟机字节码执行引擎</id>
-        <link href="https://shreksun.github.io//post/虚拟机字节码执行引擎">
-        </link>
-        <updated>2019-05-20T13:06:23.000Z</updated>
-        <summary type="html"><![CDATA[<h4 id="局部变量表">局部变量表</h4>
-<ul>
-<li>以变量槽slot为最小单位，某个变量超出变量域可以被回收给其他变量使用。</li>
-<li>局部变量定义无赋值不可使用。</li>
-</ul>
-<h4 id="操作数栈">操作数栈</h4>
-<ul>
-<li>入栈出栈就是方法执行的过程。</li>
-<li>数据类型必须和字节码指令的序列严格匹配。</li>
-</ul>
-]]></summary>
-        <content type="html"><![CDATA[<h4 id="局部变量表">局部变量表</h4>
-<ul>
-<li>以变量槽slot为最小单位，某个变量超出变量域可以被回收给其他变量使用。</li>
-<li>局部变量定义无赋值不可使用。</li>
-</ul>
-<h4 id="操作数栈">操作数栈</h4>
-<ul>
-<li>入栈出栈就是方法执行的过程。</li>
-<li>数据类型必须和字节码指令的序列严格匹配。</li>
-</ul>
-<!--more-->
-<h4 id="动态链接">动态链接</h4>
-<ul>
-<li>包含一个指向运行时常量池中该栈帧所属方法的引用。</li>
-<li><strong>java.lang.String.intern()</strong> 查找常量池中有就返回 没有加入常量池</li>
-</ul>
-<h4 id="方法返回地址">方法返回地址</h4>
-<ul>
-<li>正常退出，调用者的pc计数器值就是返回地址，栈帧中会保存。</li>
-<li>异常退出时，返回地址通过异常处理器决定。</li>
-</ul>
 ]]></content>
     </entry>
 </feed>
